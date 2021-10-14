@@ -14,11 +14,13 @@
   </ion-header>
 
   <div id="container">
-    <strong>Here are your Hum Link Stats So Far</strong>
-    <ion-col class="text" *ngFor="let item of items | async">
-      <ion-item>
+    <div class="full-width">
+      <ion-text><b>Here are your Hum Link Stats So Far</b></ion-text>
+    </div>
+    <div *ngFor="let item of items | async" class="text full-width">
+      <ion-item class="full-width">
         {{item.influencerId}}
       </ion-item>
-    </ion-col>
+    </div>
   </div>
 </ion-content>

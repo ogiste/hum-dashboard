@@ -14,12 +14,17 @@ import {getDatabase, provideDatabase} from '@angular/fire/database';
 import {getFirestore, provideFirestore} from '@angular/fire/firestore';
 import {getFunctions, provideFunctions} from '@angular/fire/functions';
 import {getStorage, provideStorage} from '@angular/fire/storage';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
-  imports: [BrowserModule,
-    IonicModule.forRoot(),
+  imports: [
+    BrowserModule,
+    IonicModule.forRoot({
+      mode: 'ios'
+    }),
+    HttpClientModule,
     AppRoutingModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideDatabase(() => getDatabase()),
