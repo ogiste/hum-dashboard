@@ -1,0 +1,7 @@
+{
+  "name": "hum-dashboard",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
