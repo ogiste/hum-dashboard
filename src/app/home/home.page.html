@@ -14,7 +14,11 @@
   </ion-header>
 
   <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    <strong>Here are your Hum Link Stats So Far</strong>
+    <ion-col class="text" *ngFor="let item of items | async">
+      <ion-item>
+        {{item.influencerId}}
+      </ion-item>
+    </ion-col>
   </div>
 </ion-content>
